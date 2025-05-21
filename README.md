@@ -28,7 +28,7 @@ This project allows you to:
 • Log all “blocked check” attempts in memory.  
 • Clean up expired temporary blocks automatically via a background service.
 
-It is built using .NET Core (7 or higher), uses an in-memory store (ConcurrentDictionary/ConcurrentQueue) to avoid needing a database, and implements concurrency-safe operations for blocking/unblocking.
+It is built using .NET Core (8 or higher), uses an in-memory store (ConcurrentDictionary/ConcurrentQueue) to avoid needing a database, and implements concurrency-safe operations for blocking/unblocking.
 
 ---
 

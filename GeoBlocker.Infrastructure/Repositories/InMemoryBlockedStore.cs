@@ -7,7 +7,6 @@ namespace GeoBlocker.Infrastructure.Repositories
 {
     public class InMemoryBlockedStore : IBlockedStore
     {
-        // Thread-safe in-memory collections
         private readonly ConcurrentDictionary<string, BlockedCountry> _blocked =
             new(StringComparer.OrdinalIgnoreCase);
 

@@ -11,11 +11,12 @@ A .NET Core Web API that manages blocked countries (permanently or temporarily) 
    1. [CountriesController](#countriescontroller)  
    2. [IpController](#ipcontroller)  
    3. [LogsController](#logscontroller)  
-6. [In-Memory Storage Explained](#in-memory-storage-explained)  
-7. [Unit Tests](#unit-tests)  
+6. [Important Note on Local Testing](#important-note-on-local-testing)  
+7. [In-Memory Storage Explained](#in-memory-storage-explained)  
+8. [Unit Tests](#unit-tests)  
    1. [InMemoryBlockedStoreTests](#inmemoryblockedstoretests)  
    2. [IpApiServiceTests](#ipapiservicetests)  
-8. [Future Improvements](#future-improvements)
+
 
 ---
 
@@ -160,6 +161,18 @@ Base Route: `/api/logs`
 
 ---
 
+## Important Note on Local Testing
+When developing or running this application on a local machine, any code that relies on “GetCallerIp()” will often receive “::1” as the caller IP (the IPv6 loopback address). The external geolocation API cannot resolve “::1” as a valid public IP, so two key endpoints may fail or return null data:
+
+• “/api/ip/check-block” (automatically uses GetCallerIp)  
+• “/api/ip/lookup” if ipAddress is omitted (also calls GetCallerIp)
+
+Because “::1” is not recognized by the geolocation service, you’ll likely see errors or null responses when calling these endpoints locally without specifying a real external IP. To properly test them, you can either:  
+1. Deploy to an environment that provides a real IP address, or  
+2. Pass a known external IP as a query param (for example, /api/ip/lookup?ipAddress=8.8.8.8) to confirm the geolocation logic works as intended.
+
+---
+
 ## In-Memory Storage Explained
 The project intentionally avoids a database. Instead, it uses thread-safe collections:
 
@@ -174,7 +187,7 @@ The project intentionally avoids a database. Instead, it uses thread-safe collec
 ---
 
 ## Unit Tests
-A separate test project **GeoBlocker.Tests** contains examples of how to test key parts of this application.
+A separate test project **GeoBlocker.Tests** contain examples of how to test key parts of this application.
 
 ### InMemoryBlockedStoreTests
 Located in `GeoBlocker.Tests/InMemoryBlockedStoreTests.cs`, these tests cover:
@@ -203,12 +216,3 @@ Located in `GeoBlocker.Tests/IpApiServiceTests.cs`, these tests demonstrate:
    This will build both the main projects and the tests, then execute all test methods.
 
 ---
-
-## Future Improvements
-- Add integration tests for controllers to validate the complete request/response cycle (HTTP status codes, JSON output, etc.).  
-- Add more advanced concurrency or performance tests if the application usage will be high.  
-- Expand the logging system or integrate it with real log aggregators if you need more detailed audit or historical data.
-
----
-
-**Thank you for using GeoBlocker!** If you have any questions or improvements, feel free to open an issue or contribute to this repository.

@@ -71,7 +71,7 @@ Below is a high-level view of the solution:
 ## Installation & Setup
 1. Clone this repository.  
 2. Navigate to the project folder containing the .sln (solution) file.  
-3. Ensure you have .NET 7 or higher installed.  
+3. Ensure you have .NET 8 or higher installed.  
 4. (Optional) Update *appsettings.json* with your chosen IP geolocation provider API key under the “IpApi” section. For example:
 
     ```json

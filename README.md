@@ -57,7 +57,7 @@ Below is a high-level view of the solution:
   - Geolocation (IpApiService)  
   - BackgroundServices (TemporalBlockCleanupService)
 
-- **GeoBlocker.Web (or .API)**  
+- **GeoBlocker.API**  
   - Controllers (CountriesController, IpController, LogsController)  
   - *Program.cs* (startup configuration, DI container setup)
 

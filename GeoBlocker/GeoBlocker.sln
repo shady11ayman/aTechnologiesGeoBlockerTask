@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoBlocker.API", "GeoBlocker.API.csproj", "{90810FC5-65E4-41D5-B9D8-CA9AC8302F1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoBlocker.Application", "..\GeoBlocker.Application\GeoBlocker.Application.csproj", "{66C71FA7-A955-4B6E-84BD-9572B2EE14DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoBlocker.Domain", "..\GeoBlocker.Domain\GeoBlocker.Domain.csproj", "{A59BE192-83C9-4219-8F55-AC18EA51C6BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoBlocker.Infrastructure", "..\GeoBlocker.Infrastructure\GeoBlocker.Infrastructure.csproj", "{0A8704C9-7718-482E-ABC7-893DF3A0A064}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoBlocker.Tests", "..\GeoBlocker.Tests\GeoBlocker.Tests.csproj", "{4A180D9C-FBAB-47BA-82FC-6C76DDF14190}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90810FC5-65E4-41D5-B9D8-CA9AC8302F1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90810FC5-65E4-41D5-B9D8-CA9AC8302F1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90810FC5-65E4-41D5-B9D8-CA9AC8302F1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90810FC5-65E4-41D5-B9D8-CA9AC8302F1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66C71FA7-A955-4B6E-84BD-9572B2EE14DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66C71FA7-A955-4B6E-84BD-9572B2EE14DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66C71FA7-A955-4B6E-84BD-9572B2EE14DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66C71FA7-A955-4B6E-84BD-9572B2EE14DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A59BE192-83C9-4219-8F55-AC18EA51C6BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A59BE192-83C9-4219-8F55-AC18EA51C6BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A59BE192-83C9-4219-8F55-AC18EA51C6BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A59BE192-83C9-4219-8F55-AC18EA51C6BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A8704C9-7718-482E-ABC7-893DF3A0A064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A8704C9-7718-482E-ABC7-893DF3A0A064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A8704C9-7718-482E-ABC7-893DF3A0A064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A8704C9-7718-482E-ABC7-893DF3A0A064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A180D9C-FBAB-47BA-82FC-6C76DDF14190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A180D9C-FBAB-47BA-82FC-6C76DDF14190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A180D9C-FBAB-47BA-82FC-6C76DDF14190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A180D9C-FBAB-47BA-82FC-6C76DDF14190}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

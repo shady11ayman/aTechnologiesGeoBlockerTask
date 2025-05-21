@@ -10,7 +10,6 @@ using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -23,11 +22,8 @@ builder.Services.Configure<ForwardedHeadersOptions>(options =>
 builder.Services.AddSingleton<IBlockedStore, InMemoryBlockedStore>();
 builder.Services.AddHttpClient<IGeoService, IpApiService>();
 
-// Register Application services
 builder.Services.AddScoped<BlockCountryService>();
-// (Add more use-case services as needed)
 
-// Register background service
 builder.Services.AddHostedService<TemporalBlockCleanupService>();
 
 // Configure IpApi from appsettings.json

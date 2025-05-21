@@ -10,7 +10,6 @@ namespace GeoBlocker.Application.Interfaces
         IEnumerable<BlockedCountry> GetAllPermanent();
 
         bool AddTemporal(string code, string name, int minutes, out string error);
-        //IEnumerable<BlockedCountry> GetAllCurrentlyBlocked();
         public IEnumerable<BlockedCountryDetails> GetAllCurrentlyBlockedDetails();
         void RemoveExpiredTemporal();
         bool IsBlocked(string code);

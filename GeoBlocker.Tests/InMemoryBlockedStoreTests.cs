@@ -13,7 +13,6 @@ namespace GeoBlocker.Tests
 
         public InMemoryBlockedStoreTests()
         {
-            // Initialize a fresh store for each test
             _store = new InMemoryBlockedStore();
         }
 

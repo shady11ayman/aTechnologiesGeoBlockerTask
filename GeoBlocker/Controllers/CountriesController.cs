@@ -56,9 +56,7 @@ namespace GeoBlocker.Web.Controllers
             [FromQuery] int page = 1,
             [FromQuery] int pageSize = 10)
         {
-            // MODIFY THIS LINE: we now call GetAllCurrentlyBlockedDetails()
-            // so we get both permanent and temporal blocks
-            // with the time remaining for temporal blocks
+           
             var data = _store.GetAllCurrentlyBlockedDetails();
 
             if (!string.IsNullOrWhiteSpace(search))

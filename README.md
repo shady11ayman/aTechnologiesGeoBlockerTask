@@ -28,7 +28,7 @@ This project allows you to:
 • Log all “blocked check” attempts in memory.  
 • Clean up expired temporary blocks automatically via a background service.
 
-It is built using .NET Core (7 or higher), uses an in-memory store (ConcurrentDictionary/ConcurrentQueue) to avoid needing a database, and implements concurrency-safe operations for blocking/unblocking.
+It is built using .NET Core (8 or higher), uses an in-memory store (ConcurrentDictionary/ConcurrentQueue) to avoid needing a database, and implements concurrency-safe operations for blocking/unblocking.
 
 ---
 
@@ -57,7 +57,7 @@ Below is a high-level view of the solution:
   - Geolocation (IpApiService)  
   - BackgroundServices (TemporalBlockCleanupService)
 
-- **GeoBlocker.Web (or .API)**  
+- **GeoBlocker.API**  
   - Controllers (CountriesController, IpController, LogsController)  
   - *Program.cs* (startup configuration, DI container setup)
 
@@ -71,7 +71,7 @@ Below is a high-level view of the solution:
 ## Installation & Setup
 1. Clone this repository.  
 2. Navigate to the project folder containing the .sln (solution) file.  
-3. Ensure you have .NET 7 or higher installed.  
+3. Ensure you have .NET 8 or higher installed.  
 4. (Optional) Update *appsettings.json* with your chosen IP geolocation provider API key under the “IpApi” section. For example:
 
     ```json
